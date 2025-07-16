@@ -125,7 +125,7 @@ async function recoverRequestChannels(client) {
 
 async function sendDatabaseBackups(client) {
   try {
-    const backupChannelId = '1386987116889899024';
+    const backupChannelId = '1393807816937963633';
     const channel = client.channels.cache.get(backupChannelId);
     
     if (!channel) {
