@@ -24,7 +24,7 @@ export default {
       if (mentionRegex.test(message.content.trim())) {
         const guildPrefix = db.getPrefix(message.guild.id);
         await message.reply(
-          `<:wavee:1388104422630096997> Hey! I'm here to help! Use ${guildPrefix}help to see my commands.`
+          `<:discotoolsxyzicon87:1395084772224667648> Hey! I'm here to help! Use ${guildPrefix}help to see my commands.`
         );
         return;
       }
