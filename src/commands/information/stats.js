@@ -18,7 +18,7 @@ class BotInfoCommand extends Command {
   constructor() {
     super({
       name: 'botinfo',
-      description: 'Displays information about Avon',
+      description: 'Displays information about Runebot',
       usage: 'botinfo',
       aliases: ['info', 'about', 'stats'],
       category: 'information',
@@ -45,7 +45,7 @@ class BotInfoCommand extends Command {
             
             return new ContainerBuilder()
               .addTextDisplayComponents(
-                new TextDisplayBuilder().setContent('<:discotoolsxyzicon79:1386987185236082688> **Avon Stats**')
+                new TextDisplayBuilder().setContent('<:discotoolsxyzicon79:1395127048040747129> **Runebot Stats**')
               )
               .addSeparatorComponents(
                 new SeparatorBuilder()
@@ -54,11 +54,11 @@ class BotInfoCommand extends Command {
               )
               .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(`**Basic Info**
-<:replycont:1386987293247541299> Bot Created: ${createdAt}
-<:replycont:1386987293247541299> Uptime: <t:${Math.floor((Date.now() - uptime) / 1000)}:R>
-<:replycont:1386987293247541299> Ping: **${ping}ms**
-<:replycont:1386987293247541299> Active Shards: **${shard}**
-<:reply:1386987390748328038> Commands: **${client.commandHandler.commands.size || 0}** | Categories: **${client.commandHandler.categories.size}**`)
+<:replycont:1395127243964944485> Bot Created: ${createdAt}
+<:replycont:1395127243964944485> Uptime: <t:${Math.floor((Date.now() - uptime) / 1000)}:R>
+<:replycont:1395127243964944485> Ping: **${ping}ms**
+<:replycont:1395127243964944485> Active Shards: **${shard}**
+<:reply:1395127267176484894> Commands: **${client.commandHandler.commands.size || 0}** | Categories: **${client.commandHandler.categories.size}**`)
               )
               .addSeparatorComponents(
                 new SeparatorBuilder()
@@ -67,12 +67,12 @@ class BotInfoCommand extends Command {
               )
               .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(`**System Info**
-<:replycont:1386987293247541299> Memory Usage: **${memoryUsage} MB / ${totalMem} GB**
-<:replycont:1386987293247541299> CPU: **${cpuModel}**
-<:replycont:1386987293247541299> System Uptime: **${systemUptime} mins**
-<:replycont:1386987293247541299> Platform: **${os.platform()}**
-<:replycont:1386987293247541299> Node.js: **${process.version}**
-<:reply:1386987390748328038> Discord.js: **${version}**`)
+<:replycont:1395127243964944485> Memory Usage: **${memoryUsage} MB / ${totalMem} GB**
+<:replycont:1395127243964944485> CPU: **${cpuModel}**
+<:replycont:1395127243964944485> System Uptime: **${systemUptime} mins**
+<:replycont:1395127243964944485> Platform: **${os.platform()}**
+<:replycont:1395127243964944485> Node.js: **${process.version}**
+<:reply:1395127267176484894> Discord.js: **${version}**`)
               )
               .addSeparatorComponents(
                 new SeparatorBuilder()
@@ -81,11 +81,11 @@ class BotInfoCommand extends Command {
               )
               .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(`**Network Metrics**
-<:replycont:1386987293247541299> Servers: **${client.guilds.cache.size}**
-<:replycont:1386987293247541299> Users: **${formattedMembers}**
-<:replycont:1386987293247541299> Total Channels: **${client.channels.cache.size}**
-<:replycont:1386987293247541299> Text Channels: **${client.channels.cache.filter(c => c.type === 0).size}**
-<:reply:1386987390748328038> Voice Channels: **${client.channels.cache.filter(c => c.type === 2).size}**`)
+<:replycont:1395127243964944485>> Servers: **${client.guilds.cache.size}**
+<:replycont:1395127243964944485> Users: **${formattedMembers}**
+<:replycont:1395127243964944485> Total Channels: **${client.channels.cache.size}**
+<:replycont:1395127243964944485> Text Channels: **${client.channels.cache.filter(c => c.type === 0).size}**
+<:reply:1395127267176484894> Voice Channels: **${client.channels.cache.filter(c => c.type === 2).size}**`)
               );
           }
           
@@ -101,8 +101,8 @@ class BotInfoCommand extends Command {
               )
               .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(`**💻 Lead Developers**  
-<:reply:1386987390748328038> [ifweditncode](https://discord.gg/argo-hq-1064090724653613126) — \`debhlobher 🥵\`, \`idle coder 😔\`, \`stored feelings in SQLite 😭📁\`  
-<:reply:1386987390748328038> [bre4d777](https://discord.gg/argo-hq-1064090724653613126) — \`\`, \`debhlover⛏️ 🍞💻\`, \`SQLite but in Excel 🧾\``)
+<:reply:1395127267176484894> [ifweditncode](https://discord.gg/Vrjf7hf2) — \`debhlobher 🥵\`, \`idle coder 😔\`, \`stored feelings in SQLite 😭📁\`  
+<:reply:1395127267176484894> [bre4d777](https://discord.gg/Vrjf7hf2) — \`\`, \`debhlover⛏️ 🍞💻\`, \`SQLite but in Excel 🧾\``)
               )
               .addSeparatorComponents(
                 new SeparatorBuilder()
@@ -111,7 +111,7 @@ class BotInfoCommand extends Command {
               )
               .addTextDisplayComponents(
                 new TextDisplayBuilder().setContent(`**📋 Management**  
-<:reply:1386987390748328038> [hperm.fr](https://discord.gg/argo-hq-1064090724653613126) — \`lafda king 👑\`, \`fucking everyone 💥\`, \`short tempered 🤡\`, \`Best Seller 🏆\`, \`dalal 🪙\`, \`RAM reseller 💸\`, \`sells .sqlite files on OLX 🧂\`, \`ghost ping ka founder 👻\``)
+<:reply:1395127267176484894> [hperm.fr](https://discord.gg/Vrjf7hf2) — \`lafda king 👑\`, \`fucking everyone 💥\`, \`short tempered 🤡\`, \`Best Seller 🏆\`, \`dalal 🪙\`, \`RAM reseller 💸\`, \`sells .sqlite files on OLX 🧂\`, \`ghost ping ka founder 👻\``)
               );
           }
 
@@ -126,8 +126,8 @@ class BotInfoCommand extends Command {
                   .setSpacing(SeparatorSpacingSize.Small)
               )
               .addTextDisplayComponents(
-                new TextDisplayBuilder().setContent(`[Invite Avon](https://discord.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8)
-[Support Server](https://discord.gg/kyPQmtJaRp)`)
+                new TextDisplayBuilder().setContent(`[Invite Runebot](https://discord.com/oauth2/authorize?client_id=1395125216442847332&permissions=1162048502615121&integration_type=0&scope=bot)
+[Support Server](https://discord.gg/Vrjf7hf2)`)
               );
           }
 
