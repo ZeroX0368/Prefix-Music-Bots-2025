@@ -23,8 +23,8 @@ export const emoji = {
   volumeUp: '🔊',
   volumeDown: '🔉',
   volumeMute: '🔇',
-  favorite: '<:discotoolsxyzicon77:1386987170824323073>',
-  unfavorite: '<:discotoolsxyzicon78:1386987173936627784>',
+  favorite: '<:discotoolsxyzicon77:1395087769109266543>',
+  unfavorite: '<:discotoolsxyzicon78:1395087843239657523>',
   
   // Music Content Emojis
   music: '🎵',
@@ -84,7 +84,7 @@ export const emoji = {
   calendar: '📅',
   
   // System Emojis
-  loading: '<a:loading_red:1386987243427594413>',
+  loading: '<a:loading_red:1395088104850853918>',
   settings: '⚙️',
   time: '⏰',
   
