@@ -15,7 +15,7 @@ class UptimeCommand extends Command {
   constructor() {
     super({
       name: 'uptime',
-      description: 'Check Avon\'s and Lavalink\'s uptime plus system info',
+      description: 'Check Runebot\'s and Lavalink\'s uptime plus system info',
       usage: 'uptime',
       aliases: ['up', 'online'],
       category: 'information',
@@ -52,14 +52,14 @@ class UptimeCommand extends Command {
       }
 
       const finalEmbed = embedManager.create({
-        title: 'Avon & Lavalink Uptime Info',
+        title: 'Runebot & Lavalink Uptime Info',
         description: [
-          `• Avon Uptime: <t:${Math.floor((Date.now() - uptime) / 1000)}:R>`,
+          `• Runebot Uptime: <t:${Math.floor((Date.now() - uptime) / 1000)}:R>`,
           `• Lavalink Uptime: <t:${Math.floor((Date.now() - nodeUptime) / 1000)}:R>`,
           uptimeInfo,
         ].join('\n'),
         color: embedManager.colors.success,
-        footer: { text: 'Made with 🧡 by Team Avon' },
+        footer: { text: 'Made with 🧡 by Bucu0368' },
         timestamp: true
       });
 
