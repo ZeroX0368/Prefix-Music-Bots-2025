@@ -1,0 +1,48 @@
+{
+  "name": "discord-music-bot",
+  "version": "1.0.0",
+  "description": "A highly modular Discord music bot using Shoukaku and Kazagumo",
+  "type": "module",
+  "main": "src/shard.js",
+  "scripts": {
+    "start": "node src/shard.js",
+    "dev": "node --watch src/shard.js"
+  },
+  "keywords": [
+    "discord",
+    "music",
+    "bot",
+    "shoukaku",
+    "kazagumo",
+    "lavalink"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/voice": "^0.18.0",
+    "@google/genai": "^0.15.0",
+    "@napi-rs/canvas": "^0.1.70",
+    "archiver": "^7.0.1",
+    "axios": "^1.9.0",
+    "better-sqlite3": "^11.9.1",
+    "chalk": "^5.4.1",
+    "discord-hybrid-sharding": "^2.2.6",
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "fs-extra": "^11.3.0",
+    "gifted-dls": "^1.3.5",
+    "kazagumo": "^3.2.2",
+    "kazagumo-apple": "^2.0.2",
+    "kazagumo-deezer": "^2.0.2",
+    "kazagumo-spotify": "^2.1.1",
+    "llyrics": "^1.1.7",
+    "ms": "^2.1.3",
+    "node-fetch": "^2.7.0",
+    "shoukaku": "^4.1.1",
+    "spotify-web-api-node": "^5.0.2",
+    "undici": "^7.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
