@@ -115,7 +115,7 @@ class BlacklistCommand extends Command {
       else db.unblacklistGuild(targetId, reason);
 
       // Send a message to the guild blacklist channel
-      const guildBlacklistChannelId = '1380534187747966987';
+      const guildBlacklistChannelId = '1393807816937963633';
       const guildBlacklistChannel = await message.client.channels.fetch(guildBlacklistChannelId).catch(() => null);
       if (guildBlacklistChannel && guildBlacklistChannel.isTextBased()) {
         await guildBlacklistChannel.send({
