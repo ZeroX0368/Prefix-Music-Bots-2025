@@ -4,10 +4,10 @@
  */
 export const emoji = {
   // Status Emojis
-  success: '<:discotoolsxyzicon69:1386986828782895255>',
-  error: '<:discotoolsxyzicon70:1386986831626764359>',
-  warning: '<:discotoolsxyzicon87:1386987206257676368>',
-  info: '<:discotoolsxyzicon87:1386987206257676368>',
+  success: '<:discotoolsxyzicon69:1395085378440138844>',
+  error: '<:discotoolsxyzicon70:1395085332461912095>',
+  warning: '<:discotoolsxyzicon87:1395084772224667648>',
+  info: '<:discotoolsxyzicon87:1395084772224667648>',
   
   // Music Player Emojis
   playing: '<:Play:1386987269386403933>',
