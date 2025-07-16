@@ -291,7 +291,7 @@ function createProgressBar(percentage, length = 25) {
   const filled = Math.floor((percentage / 100) * length);
   const empty = length - filled;
   const bar = '▰'.repeat(filled) + '▱'.repeat(empty);
-  return `[${bar}](https://discord.gg/argo-hq-1064090724653613126) **${percentage}%**`;
+  return `[${bar}](https://discord.gg/Vrjf7hf2) **${percentage}%**`;
 }
 
 function createLoadingDisplay(title, artist) {
@@ -312,7 +312,7 @@ function createErrorDisplay(title, description) {
   const actionRow = new ActionRowBuilder().addComponents(
     new ButtonBuilder()
       .setCustomId('close_lyrics_error')
-      .setEmoji('<:discotoolsxyzicon70:1386986831626764359>')
+      .setEmoji('<:discotoolsxyzicon70:1395085332461912095>')
       .setStyle(ButtonStyle.Danger)
   );
   return { embed, components: [actionRow] };
@@ -345,7 +345,7 @@ function createLyricsDisplay(lyricsData, pageContent, currentPage, totalPages, h
     navigationButtons.push(
       new ButtonBuilder()
         .setCustomId('prev_lyric_page')
-        .setEmoji('<:arrow_red_left:1386986672754921522>')
+        .setEmoji('<:arrow_red_left:1395132153070751967>')
         .setStyle(ButtonStyle.Secondary)
         .setDisabled(currentPage === 0)
     );
@@ -365,7 +365,7 @@ function createLyricsDisplay(lyricsData, pageContent, currentPage, totalPages, h
     navigationButtons.push(
       new ButtonBuilder()
         .setCustomId('next_lyric_page')
-        .setEmoji('<:arrow:1386986670129418361>')
+        .setEmoji('<:arrow:1395132307978846338>')
         .setStyle(ButtonStyle.Secondary)
         .setDisabled(currentPage === totalPages - 1)
     );
@@ -374,7 +374,7 @@ function createLyricsDisplay(lyricsData, pageContent, currentPage, totalPages, h
   navigationButtons.push(
     new ButtonBuilder()
       .setCustomId('close_lyrics')
-      .setEmoji('<:discotoolsxyzicon70:1386986831626764359>')
+      .setEmoji('<:discotoolsxyzicon70:1395085332461912095>')
       .setStyle(ButtonStyle.Danger)
   );
 
@@ -415,7 +415,7 @@ function createSyncDisplay(lyricsData, lyricsContent, currentTime, duration, pro
         .setStyle(ButtonStyle.Danger),
       new ButtonBuilder()
         .setCustomId('close_lyrics')
-        .setEmoji('<:discotoolsxyzicon70:1386986831626764359>')
+        .setEmoji('<:discotoolsxyzicon70:1395085332461912095>')
         .setStyle(ButtonStyle.Secondary)
     )
   ];
@@ -432,7 +432,7 @@ function createTimeoutDisplay() {
   const actionRow = new ActionRowBuilder().addComponents(
     new ButtonBuilder()
       .setCustomId('close_lyrics_timeout')
-      .setEmoji('<:discotoolsxyzicon70:1386986831626764359>')
+      .setEmoji('<:discotoolsxyzicon70:1395085332461912095>')
       .setStyle(ButtonStyle.Danger)
   );
   return { embed, components: [actionRow] };
@@ -489,7 +489,7 @@ export default {
 
           if (!player) {
             await interaction.editReply({
-              content: '<:discotoolsxyzicon87:1386987206257676368> There is no active music player in this server to set volume for.',
+              content: '<:discotoolsxyzicon87:1395084772224667648> There is no active music player in this server to set volume for.',
             });
             return;
           }
@@ -497,7 +497,7 @@ export default {
           await playerManager.setVolume(newVolume);
 
           await interaction.editReply({
-            content: `<:discotoolsxyzicon69:1386986828782895255> Volume has been set to **${newVolume}%**`,
+            content: `<:discotoolsxyzicon69:1395085378440138844> Volume has been set to **${newVolume}%**`,
           });
 
           await updatePlayerButtons(interaction, client, player);
@@ -520,7 +520,7 @@ export default {
 
       if (!player) {
         return interaction.reply({
-          content: '<:discotoolsxyzicon87:1386987206257676368> There is no active music player in this server.',
+          content: '<:discotoolsxyzicon87:1395084772224667648> There is no active music player in this server.',
           ephemeral: true
         });
       }
@@ -538,7 +538,7 @@ export default {
 
         if (!voiceChannelId || voiceChannelId !== player.voiceId) {
           return interaction.reply({
-            content: `<:discotoolsxyzicon87:1386987206257676368> You need to be in the same voice channel (<#${player.voiceId}>) to use player controls.`,
+            content: `<:discotoolsxyzicon87:1395084772224667648> You need to be in the same voice channel (<#${player.voiceId}>) to use player controls.`,
             ephemeral: true
           });
         }
@@ -554,7 +554,7 @@ export default {
     } catch (error) {
       logger.error('InteractionCreate', 'Error handling interaction', error);
       try {
-        const errorMessage = '<:discotoolsxyzicon87:1386987206257676368> An error occurred while processing your request.';
+        const errorMessage = '<:discotoolsxyzicon87:1395084772224667648> An error occurred while processing your request.';
         if (interaction.deferred || interaction.replied) {
           await interaction.editReply({ content: errorMessage }).catch(e => logger.error('InteractionCreate', 'Failed to editReply on error', e));
         } else if (interaction.isRepliable()){
@@ -757,33 +757,33 @@ export default {
 
   async handlePreviousButton(player, playerManager) {
     if (!player.queue?.previous) {
-      return '<:discotoolsxyzicon87:1386987206257676368> There is no previous track in the queue.';
+      return '<:discotoolsxyzicon87:1395084772224667648> There is no previous track in the queue.';
     }
     await playerManager.previous();
-    return '<:discotoolsxyzicon69:1386986828782895255> Playing the previous track.';
+    return '<:discotoolsxyzicon69:1395085378440138844> Playing the previous track.';
   },
 
   async handlePauseButton(player, playerManager) {
     if (player.paused) {
       await playerManager.resume();
-      return '<:discotoolsxyzicon69:1386986828782895255> Resumed the player.';
+      return '<:discotoolsxyzicon69:1395085378440138844> Resumed the player.';
     } else {
       await playerManager.pause();
-      return '<:discotoolsxyzicon69:1386986828782895255> Paused the player.';
+      return '<:discotoolsxyzicon69:1395085378440138844> Paused the player.';
     }
   },
 
   async handleStopButton(player, playerManager) {
     await playerManager.destroy();
-    return '<:discotoolsxyzicon69:1386986828782895255> Stopped the player and cleared the queue.';
+    return '<:discotoolsxyzicon69:1395085378440138844> Stopped the player and cleared the queue.';
   },
 
   async handleSkipButton(player, playerManager) {
     if (!player.queue.length && !player.queueRepeat) {
-      return '<:discotoolsxyzicon87:1386987206257676368> No more tracks in the queue to skip.';
+      return '<:discotoolsxyzicon87:1395084772224667648> No more tracks in the queue to skip.';
     }
     await playerManager.skip();
-    return '<:discotoolsxyzicon69:1386986828782895255> Skipped the current track.';
+    return '<:discotoolsxyzicon69:1395085378440138844> Skipped the current track.';
   },
 
   async handleLoopButton(player, playerManager) {
@@ -795,17 +795,17 @@ export default {
       case 'none':
         await playerManager.setLoop('track');
         nextLoopState = 'track';
-        response = '<:discotoolsxyzicon69:1386986828782895255> Looping the current track.';
+        response = '<:discotoolsxyzicon69:1395085378440138844> Looping the current track.';
         break;
       case 'track':
         await playerManager.setLoop('queue');
         nextLoopState = 'queue';
-        response = '<:discotoolsxyzicon69:1386986828782895255> Looping the entire queue.';
+        response = '<:discotoolsxyzicon69:1395085378440138844> Looping the entire queue.';
         break;
       case 'queue':
         await playerManager.setLoop('none');
         nextLoopState = 'none';
-        response = '<:discotoolsxyzicon69:1386986828782895255> Loop mode turned off.';
+        response = '<:discotoolsxyzicon69:1395085378440138844> Loop mode turned off.';
         break;
     }
     return response;
@@ -813,24 +813,24 @@ export default {
 
   async handleShuffleButton(player, playerManager) {
     if (player.queue.length < 2) {
-      return '<:discotoolsxyzicon87:1386987206257676368> Need at least 2 tracks in the queue to shuffle.';
+      return '<:discotoolsxyzicon87:1395084772224667648> Need at least 2 tracks in the queue to shuffle.';
     }
     await playerManager.shuffle();
-    return '<:discotoolsxyzicon69:1386986828782895255> Queue has been shuffled.';
+    return '<:discotoolsxyzicon69:1395085378440138844> Queue has been shuffled.';
   },
 
   async handleAutoplayButton(player, playerManager) {
     const newAutoplayState = !player.autoplay;
     await playerManager.setAutoplay(newAutoplayState);
     return newAutoplayState
-      ? '<:discotoolsxyzicon69:1386986828782895255> Autoplay mode is now **ON**.'
-      : '<:discotoolsxyzicon69:1386986828782895255> Autoplay mode is now **OFF**.';
+      ? '<:discotoolsxyzicon69:1395085378440138844> Autoplay mode is now **ON**.'
+      : '<:discotoolsxyzicon69:1395085378440138844> Autoplay mode is now **OFF**.';
   },
 
   async handleLikeButton(interaction, player, playerManager) {
     const currentTrack = player.queue?.current;
     if (!currentTrack) {
-      return '<:discotoolsxyzicon87:1386987206257676368> No track is currently playing.';
+      return '<:discotoolsxyzicon87:1395084772224667648> No track is currently playing.';
     }
 
     const userId = interaction.user.id;
@@ -839,16 +839,16 @@ export default {
 
     if (isLiked) {
       await db.user.unlikeTrack(userId, trackUri);
-      return '<:discotoolsxyzicon69:1386986828782895255> Track removed from your liked songs.';
+      return '<:discotoolsxyzicon69:1395085378440138844> Track removed from your liked songs.';
     } else {
       await db.user.likeTrack(userId, trackUri, currentTrack);
-      return '<:discotoolsxyzicon69:1386986828782895255> Track added to your liked songs!';
+      return '<:discotoolsxyzicon69:1395085378440138844> Track added to your liked songs!';
     }
   },
 
   async handleQueueButton(interaction, player) {
     if (!player || !player.queue || player.queue.size === 0) {
-        return interaction.reply({ content: '<:discotoolsxyzicon87:1386987206257676368> The queue is empty.', ephemeral: true });
+        return interaction.reply({ content: '<:discotoolsxyzicon87:1395084772224667648> The queue is empty.', ephemeral: true });
     }
 
     const currentPage = 0;
@@ -882,21 +882,21 @@ export default {
         actionRow.addComponents(
             new ButtonBuilder()
                 .setCustomId('prev_queue_page')
-                .setEmoji('<:arrow_red_left:1386986672754921522>')
+                .setEmoji('<:arrow_red_left:1395132153070751967>')
                 .setStyle(ButtonStyle.Secondary)
                 .setDisabled(page === 0)
         );
         actionRow.addComponents(
             new ButtonBuilder()
                 .setCustomId('next_queue_page')
-                .setEmoji('<:arrow:1386986670129418361>')
+                .setEmoji('<:arrow:1395132307978846338>')
                 .setStyle(ButtonStyle.Secondary)
                 .setDisabled(page >= totalPages - 1)
         );
         actionRow.addComponents(
             new ButtonBuilder()
                 .setCustomId('close_queue_display')
-                .setEmoji('<:discotoolsxyzicon70:1386986831626764359>')
+                .setEmoji('<:discotoolsxyzicon70:1395085332461912095>')
                 .setStyle(ButtonStyle.Danger)
         );
         return [actionRow];
