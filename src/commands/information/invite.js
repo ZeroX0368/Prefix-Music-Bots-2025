@@ -18,7 +18,7 @@ class InviteCommand extends Command {
   constructor() {
     super({
       name: 'invite',
-      description: 'Want Avon in your server? Use this command to add me!',
+      description: 'Want Runebot in your server? Use this command to add me!',
       usage: 'invite',
       aliases: ['inv', 'add'],
       category: 'information',
@@ -36,19 +36,19 @@ class InviteCommand extends Command {
    try {
        const inviteButton = new ButtonBuilder()
 
-        .setLabel('Admin Perms')     .setURL('https://discord.com/oauth2/authorize?client_id=1131938711639183363&permissions=8&integration_type=0&scope=bot')
+        .setLabel('Admin Perms')     .setURL('https://discord.com/oauth2/authorize?client_id=1395125216442847332&permissions=1162048502615121&integration_type=0&scope=bot')
         .setStyle(ButtonStyle.Link);
        
 
        const reqinvite = new ButtonBuilder()
 
-        .setLabel('Required Perms')     .setURL('https://discord.com/oauth2/authorize?client_id=1131938711639183363&permissions=1162048502615121&integration_type=0&scope=bot')
+        .setLabel('Required Perms')     .setURL('https://discord.com/oauth2/authorize?client_id=1395125216442847332&permissions=1162048502615121&integration_type=0&scope=bot')
 
         .setStyle(ButtonStyle.Link);
 
       const row = new ActionRowBuilder().addComponents(inviteButton, reqinvite);
    
-      await message.reply({ content: `[Invite Avon](https://discord.com/discovery/applications/1131938711639183363)`, components: [row] });
+      await message.reply({ content: `[Invite Runebot](https://discord.com/oauth2/authorize?client_id=1395125216442847332&permissions=1162048502615121&integration_type=0&scope=bot)`, components: [row] });
        } catch (error) {
       logger.error('InviteCommand', 'Error executing invite command', error);
      }      
