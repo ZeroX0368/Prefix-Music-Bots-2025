@@ -34,7 +34,7 @@ export default {
 
     try {
 
-      const logChannelId = '1386987116889899022';
+      const logChannelId = '1393807816937963633';
 
       const logChannel = await client.channels.fetch(logChannelId).catch(() => null);
 
