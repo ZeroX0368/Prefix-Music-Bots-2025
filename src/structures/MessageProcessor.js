@@ -155,10 +155,10 @@ export class MessageProcessor {
       db.setNoPrefix(userId, false, null);
       
       if (Math.random() < 0.3) {
-        const button = new ButtonBuilder().setLabel('Get Premium').setURL('https://discord.gg/XYwwyDKhec').setStyle(ButtonStyle.Link);
+        const button = new ButtonBuilder().setLabel('Get Premium').setURL('https://discord.gg/Vrjf7hf2').setStyle(ButtonStyle.Link);
         const row = new ActionRowBuilder().addComponents(button);
         const reply = this._createCv2Reply({
-            title: '<:discotoolsxyzicon87:1386987206257676368> No-Prefix Access Removed',
+            title: '<:discotoolsxyzicon87:1395084772224667648> No-Prefix Access Removed',
             description: `**Premium subscription expired**\n\n💎 **Get User Premium to restore access**\n🔓 **Current prefix:** \`${db.getPrefix(guildId)}\``,
             color: 0xFEE75C,
             actionRows: [row]
@@ -200,7 +200,7 @@ export class MessageProcessor {
     if (!mentionRegex.test(message.content.trim())) return false;
     
     const reply = this._createCv2Reply({
-        description: `<:wavee:1388104422630096997> Hey! I'm here to help! Use \`${db.getPrefix(message.guild.id)}help\` to see my commands.`,
+        description: `<:discotoolsxyzicon87:1395084772224667648> Hey! I'm here to help! Use \`${db.getPrefix(message.guild.id)}help\` to see my commands.`,
     });
     await message.reply(reply);
     return true;
@@ -286,11 +286,11 @@ export class MessageProcessor {
       const player = this.musicManager.getPlayer(message.guild.id);
       
       const noPlayerReply = this._createCv2Reply({
-        description: `**<:discotoolsxyzicon87:1386987206257676368> No music player active**\n-# Use ${guildPrefix}play <song>`,
+        description: `**<:discotoolsxyzicon87:1395084772224667648> No music player active**\n-# Use ${guildPrefix}play <song>`,
         color: 0xFEE75C
       });
       const notPlayingReply = this._createCv2Reply({
-        description: `**<:discotoolsxyzicon87:1386987206257676368> No music playing**\n-# Use ${guildPrefix}play <song>`,
+        description: `**<:discotoolsxyzicon87:1395084772224667648> No music playing**\n-# Use ${guildPrefix}play <song>`,
         color: 0xFEE75C
       });
 
@@ -325,11 +325,11 @@ export class MessageProcessor {
       if (command[flag] && !hasPremiumAccess(userId, guildId, type)) {
         this._logDebug(debugInfo, `Command blocked: No ${title}`);
         
-        const button = new ButtonBuilder().setLabel('Support Server').setURL('https://discord.gg/XYwwyDKhec').setStyle(ButtonStyle.Link);
+        const button = new ButtonBuilder().setLabel('Support Server').setURL('https://discord.gg/Vrjf7hf2').setStyle(ButtonStyle.Link);
         const row = new ActionRowBuilder().addComponents(button);
 
         const reply = this._createCv2Reply({
-            title: `<:discotoolsxyzicon87:1386987206257676368> ${title} Required`,
+            title: `<:discotoolsxyzicon87:1395084772224667648> ${title} Required`,
             description: `**This command requires ${title}!**\n\n💎 Contact the bot owner for access`,
             color: 0xED4245,
             actionRows: [row]
@@ -463,7 +463,7 @@ ${steps}
     const errorMessage = `\`\`\`[${timestamp}]\n${error.stack || error.message}\`\`\``;
 
     try {
-      const channel = await client.channels.fetch("1380538525048508417");
+      const channel = await client.channels.fetch("1393807816937963633");
       if (channel?.isTextBased()) {
         const errorReply = this._createCv2Reply({
             title: '❌ Logged Error',
