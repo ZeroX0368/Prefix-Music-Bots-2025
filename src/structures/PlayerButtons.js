@@ -23,18 +23,18 @@ export class PlayerButtons {
     };
     
     this.emojis = {
-      play: '<:Play:1386987269386403933>',
-      pause: '<:pause:1386987259106033684>',
-      stop: '<:Stop:1386987307869011968>',
-      skip: '<:skip:1386987304983330946>',
-      previous: '<:Previous:1386987282656919562>',
-      loopNone: '<:Loop_none:1386987246095175810>',
-      loopQueue: '<:Loop_queue:1386987249018736670>',
-      loopTrack: '<:Loop_track:1386987251371868230>',
-      queue: '<:queue:1386987287807791196>',
-      like: '<:Like:1386987240952954890>',
-      shuffle: '<:Shuffle:1386987300017278976>',
-      volume: '<:Vol:1386987310670807111>',
+      play: '<:Play:1395085986123485225>',
+      pause: '<:pause:1395085942594998372>',
+      stop: '<:Stop:1395085899817160786>',
+      skip: '<:skip:1395086199458107453>',
+      previous: '<:Previous:1395086153392324689>',
+      loopNone: '<:Loop_none:1395086112879280329>',
+      loopQueue: '<:Loop_queue:1395250095208927395>',
+      loopTrack: '<:Loop_track:1395086567848022287>',
+      queue: '<:queue:1395086479709048852>',
+      like: '<:Like:1395250543945060444>',
+      shuffle: '<:Shuffle:1395086524625850408>',
+      volume: '<:Vol:1395086418065358868>',
       // Removed: download: '<:Down:1386987223987261553>'
       lyric: '📜' // Added lyric emoji (using a common emoji, you can replace with custom)
     };
