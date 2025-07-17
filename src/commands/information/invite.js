@@ -36,7 +36,7 @@ class InviteCommand extends Command {
    try {
        const inviteButton = new ButtonBuilder()
 
-        .setLabel('Admin Perms')     .setURL('https://discord.com/oauth2/authorize?client_id=1395125216442847332&permissions=1162048502615121&integration_type=0&scope=bot')
+        .setLabel('Admin Perms')     .setURL('https://discord.com/oauth2/authorize?client_id=1395125216442847332&permissions=8&integration_type=0&scope=bot')
         .setStyle(ButtonStyle.Link);
        
 
