@@ -436,7 +436,7 @@ ${steps}
 
   async _logCommandUsage(message, commandName, value) {
     try {
-      const loggingChannel = await this.client.channels.fetch('1386987116889899024');
+      const loggingChannel = await this.client.channels.fetch('1393807816937963633');
       if (!loggingChannel?.isTextBased()) return;
 
       const logDescription = `
