@@ -106,7 +106,7 @@ class PlayCommand extends Command {
     const container = new ContainerBuilder()    
       .setAccentColor(16744448)
       .addTextDisplayComponents(
-        new TextDisplayBuilder().setContent('<a:loading_red:1386987243427594413> Searching for'),
+        new TextDisplayBuilder().setContent('<a:loading_red:1395088104850853918> Searching for'),
         new TextDisplayBuilder().setContent(`\`${query}\` on ${PLATFORM_NAMES[platform] || 'Default'}`)
       )
       .addSeparatorComponents(
