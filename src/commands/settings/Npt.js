@@ -48,7 +48,7 @@ class NoPrefixToggleCommand extends Command {
       } else {
         const errorEmbed = embedManager.create({
           color: embedManager.colors.error,
-          title: '<:discotoolsxyzicon87:1386987206257676368> Invalid Option',
+          title: '<:discotoolsxyzicon87:1395084772224667648> Invalid Option',
           description: `**Invalid option:** \`${arg}\`\n\n` +
                       `**Valid options:**\n` +
                       `• \`on\` / \`enable\` - Enable no-prefix mode\n` +
@@ -70,7 +70,7 @@ class NoPrefixToggleCommand extends Command {
     // Create success embed
     const successEmbed = embedManager.create({
       color: newStatus ? embedManager.colors.success : embedManager.colors.warning,
-      title: `<:discotoolsxyzicon83:1386987196203925556> No-Prefix Mode ${newStatus ? 'Enabled' : 'Disabled'}`,
+      title: `<:discotoolsxyzicon83:1395691010784493689> No-Prefix Mode ${newStatus ? 'Enabled' : 'Disabled'}`,
       description: `**Your no-prefix mode has been ${action}!**\n\n` +
                   (newStatus ? 
                     `💎 **You can now use commands without any prefix!**\n` +
