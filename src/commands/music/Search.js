@@ -69,7 +69,7 @@ class SearchCommand extends Command {
     const searchManager = new SearchManager(musicManager);  
     const searchingEmbed = embedManager.create({  
       color: embedManager.colors.default,    
-      description: `<a:byte_loading:1386986717533175869> Searching for \`${query}\` on ${platform.charAt(0).toUpperCase() + platform.slice(1)}`,  
+      description: `<a:byte_loading:1395561917002547364> Searching for \`${query}\` on ${platform.charAt(0).toUpperCase() + platform.slice(1)}`,  
       timestamp: true  
     });  
     const searchingMsg = await message.reply({ embeds: [searchingEmbed] });  
