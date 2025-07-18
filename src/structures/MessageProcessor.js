@@ -32,7 +32,7 @@ export class MessageProcessor {
   }
   
   async _sendCv2Error(message, title, description) {
-    const reply = this._createCv2Reply({ title: `<:discotoolsxyzicon87:1386987206257676368> ${title}`, description, color: 0xED4245 });
+    const reply = this._createCv2Reply({ title: `<:discotoolsxyzicon87:1395084772224667648> ${title}`, description, color: 0xED4245 });
     return message.reply(reply);
   }
 
@@ -224,7 +224,7 @@ export class MessageProcessor {
 
     if (command.maintenance && !isOwner) {
       this._logDebug(debugInfo, 'Command blocked: Under maintenance');
-      const reply = this._createCv2Reply({ description: '<:byte_info:1386986693550280776> Command under maintenance.', color: 0x3498DB });
+      const reply = this._createCv2Reply({ description: '<:byte_info:1395684821342228542>  Command under maintenance.', color: 0x3498DB });
       await message.reply(reply);
       return false;
     }
