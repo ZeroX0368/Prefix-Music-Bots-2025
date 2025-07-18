@@ -15,7 +15,7 @@ class PremiumCommand extends Command {
       usage: 'premium <grant|revoke|stats|cleanup> [type] [id] [duration] [reason]',
       aliases: ['prem'],
       category: 'owner',
-      management: true,
+      ownerOnly: true,
       examples: [
         'premium grant user 123456789 30d Premium granted',
         'premium grant guild 987654321 perm Guild premium',
